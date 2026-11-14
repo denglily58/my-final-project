@@ -1,34 +1,70 @@
-# Final Project - Introduction to Git and GitHub
+# Simple Interest Calculator
 
-## Project Name
-Final Project - Introduction to Git and GitHub
+A Bash script that calculates **simple interest** based on user input.
 
-## Project Details
-This repository is the final project submission for IBM's **Introduction to Git and GitHub** course on Coursera / IBM SkillsNetwork.
+## About
 
-The project demonstrates the following skills:
+This project is a command-line calculator written in Bash. It prompts the user for three input values and then computes the simple interest using the standard formula.
 
-- Creating and managing a public GitHub repository through the GitHub UI
-- Adding an open-source license (Apache License 2.0)
-- Adding a Code of Conduct (Contributor Covenant 2.1)
-- Adding a CONTRIBUTING guide
-- Writing a Bash script (`simple-interest.sh`) that calculates simple interest
-- Forking a repository, creating branches, merging branches, and opening pull requests through the Git CLI
-- Using `curl` to interact with the GitHub REST API to verify fork and pull request status
+## Formula
 
-## Files in this Repository
+```
+Simple Interest (SI) = (Principal * Rate * Time) / 100
+```
+
+## Input Fields
+
+| Field | Description |
+|-------|-------------|
+| **Principal (P)** | The original sum of money (the amount deposited or borrowed) |
+| **Rate of Interest (R)** | The annual rate of interest, in percent |
+| **Time Period (T)** | The time period for which interest is calculated, in years |
+
+## Output
+
+The script prints the computed **Simple Interest** value based on the three inputs above.
+
+## Usage
+
+```bash
+# Make the script executable
+chmod +x simple-interest.sh
+
+# Run the script
+./simple-interest.sh
+```
+
+Example run:
+
+```
+Simple Interest Calculator
+--------------------------
+Enter the principal amount: 1000
+Enter the rate of interest (in %): 5
+Enter the time period (in years): 2
+--------------------------
+Principal : 1000
+Rate      : 5 %
+Time      : 2 year(s)
+Simple Interest is: 100.00
+```
+
+## Files
 
 | File | Purpose |
 |------|---------|
-| `README.md` | Project overview and details |
+| `README.md` | Project overview and details about the simple interest calculator |
+| `simple-interest.sh` | The Bash script that performs the calculation |
 | `LICENSE` | Apache License 2.0 |
 | `CODE_OF_CONDUCT.md` | Contributor Covenant 2.1 |
 | `CONTRIBUTING.md` | Contribution guidelines |
-| `simple-interest.sh` | Bash calculator for simple interest |
-| `forked-repo` | curl output verifying the forked repository |
-| `merge_branches` | Terminal output for merging `bug-fix-typo` into `main` |
-| `bug-fix-revert` | curl output verifying the pull request from the fork |
-| `github-branches` | Terminal output showing all branches and their status |
+
+## Requirements
+
+- A Unix-like environment (Linux, macOS, WSL)
+- `bash`
+- `bc` (used for floating-point arithmetic)
 
 ## Author
+
 Lily Deng
